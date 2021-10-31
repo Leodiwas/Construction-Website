@@ -611,6 +611,35 @@ body
   text-align: center;
 }
 
+/* .......................PROJECTS PAGE CARDS.................... */
+.project_page-cards {
+  padding-block: 6rem;
+}
+.project_page-cards .col-12 > .para {
+  text-align: center;
+  max-width: 62ch;
+  margin: auto;
+  margin-bottom: 3.2rem;
+}
+.scroll-container {
+  position: absolute;
+  right: 10rem;
+  bottom: 5.4rem;
+}
+.btn-scroll {
+  padding: 2rem;
+  background: var(--color-dark-blue);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.btn-scroll:hover {
+  background: var(--color-btn-hover-fadeBlue);
+}
+.btn-scroll > i {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
 /* ................Mediia Queries.....................  */
 @media screen and (max-width: 768px) {
   .navbar-nav {
@@ -651,7 +680,7 @@ body
     max-width: 10ch;
   }
   .card-link {
-    top: 26.9rem !important;
+    top: 26rem !important;
   }
   .card-title > h4 {
     margin: auto;
@@ -721,6 +750,15 @@ body
   .ourcompany-footer,
   .ourcompany-copyright {
     top: 344rem;
+  }
+  .project_page-cards .col-4 {
+    width: 50%;
+  }
+  .scroll-container {
+    right: 38rem;
+  }
+  .project_page-cards .card-link {
+    top: 42.5rem !important;
   }
 }
 
@@ -868,5 +906,11 @@ body
   .ourcompany-footer,
   .ourcompany-copyright {
     top: 564rem;
+  }
+  .scroll-container {
+    right: 20rem;
+  }
+  .project_page-cards .card-link {
+    top: 43.9rem !important;
   }
 }

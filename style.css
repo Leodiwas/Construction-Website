@@ -16,14 +16,14 @@
   --color-dark-green: #048949;
 
   --color-red: #da3f3f;
-  --color-blue: #0058aa;
+  --color-blue: #006bcd;
   --color-blue-light: #d0e9ff;
   --color-fade-light-blue: #d0e8ff;
 
   --color-dark-blue: #002f5a;
 
   /* btn-color */
-  --color-btn-hover-fadeBlue: #006bcd;
+  --color-btn-hover-fadeBlue: #0058aa;
   --color-btn-hover-fadeWhite: #ececec;
 
   --color-btn-focus-blue: #006bcd;
@@ -55,26 +55,30 @@ a {
 
 /* ................TYPHOGRAPHY.................... */
 h1,
-h2.h3 {
-  font-family: var(--font-Work-sans);
+h2,
+h3 {
+  font-family: var(--font-Work-sans) !important;
   font-style: normal;
   color: var(--text-black);
-  text-transform: uppercase;
 }
 h1 {
   font-weight: 600 !important;
   font-size: 4.8rem !important;
   line-height: 6.4rem !important ;
+  font-family: var(--font-Work-sans) !important;
+  text-transform: uppercase;
 }
 h2 {
   font-weight: 500 !important;
   font-size: 3.2rem !important;
   line-height: 4rem !important;
+  font-family: var(--font-Work-sans) !important;
 }
 h3 {
   font-weight: 600 !important;
   font-size: 2.4rem !important;
   line-height: 3rem !important;
+  font-family: var(--font-Work-sans) !important;
 }
 h4 {
   font-weight: 600 !important;
@@ -183,6 +187,9 @@ h4 {
 .fd-column {
   flex-direction: column !important;
 }
+.pr-16 {
+  padding-right: 16rem;
+}
 
 /*...................navbar........................ */
 .navbar {
@@ -224,6 +231,12 @@ h4 {
 /*..................Carousel.................. */
 .hero {
   position: relative;
+  height: 100vh;
+}
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .carousel-inner {
   height: 100vh;
@@ -243,8 +256,9 @@ h4 {
 }
 .hero-content {
   position: absolute;
-  top: 30rem;
-  left: 50rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .hero-content h1 {
   max-width: 21ch;
@@ -254,8 +268,8 @@ h4 {
 
 /* ...................about_us........................ */
 .about_us {
-  padding: 7.2rem 30rem;
-  background: linear-gradient(90deg, #cce7ff 0%, rgba(204, 231, 255, 0) 100%);
+  position: relative;
+  padding: 3.2rem 22rem;
 }
 .about_us .col {
   display: flex;
@@ -272,7 +286,7 @@ h4 {
 }
 .about_us-contents > .para {
   margin-bottom: 4rem;
-  max-width: 73ch;
+  max-width: 63ch;
 }
 .about_us-contents > .btn-container {
   margin-bottom: 10.2rem;
@@ -283,6 +297,15 @@ h4 {
 }
 .col-6 {
   margin-bottom: 2.4rem;
+}
+
+/* ..............benefits section.............. */
+.benefits_section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(204, 231, 255, 0) 0%, #cce7ff 100%);
+}
+.benefits-div-1 {
+  padding: 3.2rem 26rem;
 }
 .benefits {
   display: flex;
@@ -295,19 +318,39 @@ h4 {
 .benefits-para {
   max-width: 30ch;
 }
+.bg-seperator {
+  position: absolute;
+  top: 76rem;
+  left: 0;
+  height: 22rem;
+  width: 100%;
+  background: var(--color-dark-blue);
+}
 
+/* about_us section */
+
+.about-us {
+  position: relative;
+}
+.union-left {
+  position: absolute;
+  top: -12rem;
+  left: 0;
+  z-index: -1;
+}
+.union-right {
+  position: absolute;
+  top: -12rem;
+  right: 0;
+  z-index: -1;
+}
 /* ..................project-card......................... */
 
 .project-card {
   position: relative;
-  padding-bottom: 13rem;
-  background: linear-gradient(90deg, #cce7ff 0%, rgba(204, 231, 255, 0) 100%);
-}
-.project-card > .container {
-  padding: 0 10rem;
-}
-.project-card > .row {
-  justify-content: space-around;
+  /* height: 100vh; */
+  /* padding-block: 8rem; */
+  background: linear-gradient(180deg, #cce7ff 0%, rgba(204, 231, 255, 0) 35%);
 }
 
 /* .............card............ */
@@ -315,20 +358,24 @@ h4 {
   border-radius: 0.4rem;
   text-align: center;
   box-shadow: 0px 10px 20px rgba(1, 30, 88, 0.15);
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
   transition: all 0.5s ease;
+  margin: 1rem;
 }
 .card:hover {
   transform: scale(1.05);
 }
-.card > img {
+.card-logo-link {
   position: relative;
+}
+.card-logo-link > img {
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
 }
 .card-link {
   position: absolute;
-  top: 46rem;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding-block: 1.4rem;
   background: rgba(0, 0, 0, 0.4);
@@ -336,26 +383,20 @@ h4 {
 .card-title {
   padding-block: 2.4rem;
 }
-.project-card > .row {
-  justify-content: center;
-}
+
 .project-card .btn-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 8rem;
 }
-.bg-seperator {
-  position: absolute;
-  z-index: -1;
-  top: 24.6rem;
-  left: 0;
-  height: 22rem;
-  width: 100%;
-  background: var(--color-dark-blue);
+.project-card .col-4 {
+  width: 30%;
 }
 
 /* ....................news_section..................... */
 .news_section {
   background: var(--color-white);
+  padding: 0 0 10rem 0;
 }
 .news_section .btn-container {
   display: flex;
@@ -464,86 +505,59 @@ h4 {
 }
 
 /* .......................OUR COMPANY PAGE STYLING...................... */
-.about_work {
-  position: relative;
-}
-.about_work .card-1 {
-  max-width: 75rem;
-  position: absolute;
-  top: -11.2rem;
-  margin-bottom: 5.6rem !important;
-}
-.about_work .card-1 > h2 {
-  margin-bottom: 2.4rem !important;
-}
-.about_work .card-2 {
-  max-width: 33rem;
-  position: absolute;
-  top: -38rem;
-  right: 11rem;
-}
-.about_us .card-2 > h3 {
-  margin-bottom: 1rem;
-}
-.about_work .card-1,
-.about_work .card-2 {
-  background: var(--color-white);
-  padding: 3.8rem 3.4rem;
-}
-.about_work .row:nth-child(2) {
-  position: absolute !important;
-  top: 15rem !important;
-  left: 16rem;
-}
 
+.hero-box {
+  position: absolute;
+  top: 40rem;
+  width: 100%;
+  height: 100vh;
+}
 .work-steps {
+  clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+  background: var(--color-blue-light);
+  width: 25rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.about_work .steps {
-  background: var(--color-fade-light-blue);
-  height: 30rem;
-  width: 30rem;
-  clip-path: polygon(50% 0, 90% 30%, 90% 70%, 50% 100%, 10% 70%, 10% 30%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.our-mission {
+  box-shadow: 0px 14px 24px rgba(1, 30, 88, 0.25);
+  max-width: 32rem;
 }
-.steps > h2 {
-  margin-bottom: 2rem;
+.how-we-work,
+.our-mission {
+  background-color: var(--color-white);
+  padding: 3rem;
+  margin: 3rem;
 }
-.about_work-bg-seperator {
-  position: absolute;
+.how-we-work .para {
+  max-width: 58ch;
+}
+.our-mission .para {
+  max-width: 22ch;
+}
+.hero-box-bg-seperator {
+  height: 20rem;
+  top: 56rem;
   z-index: -1;
-  top: 29.6rem;
-  left: 0;
-  height: 18rem;
-  width: 100%;
-  background: var(--color-dark-blue);
-}
-
-.ourcompany-footer {
-  position: relative;
-  top: 214rem;
-  left: 0;
-}
-.ourcompany-copyright {
-  position: relative;
-  top: 214rem;
-  left: 0;
 }
 
 /* .............our_history styling............ */
 .our_history {
-  position: relative;
-  height: 100vh;
-  top: 48rem;
   padding-block: 9rem;
+  background: linear-gradient(180deg, #cce7ff 0%, rgba(204, 231, 255, 0) 100%);
+  position: relative;
+  top: 39rem;
+  height: 100vh;
 }
-
+#our_history > div > div:nth-child(3) > div > div.our_history-contents {
+  padding-right: 16rem;
+}
+.our_history-contents > h3 {
+  margin-bottom: 2rem;
+}
 .our_history .our_history-title {
   margin-bottom: 5.4rem;
   display: flex;
@@ -640,8 +654,81 @@ body
   color: var(--color-white);
 }
 
+/* ......................OUR SERVICES PAGE STYLING......................... */
+.our_services {
+  margin-block: 4rem;
+}
+.our_services-div-first {
+  margin-bottom: 4rem;
+}
+.our_services-div-first .para {
+  max-width: 47ch;
+}
+.details {
+  background: var(--color-blue-light);
+  padding: 2rem 1.6rem;
+  height: 24.2rem;
+  margin-bottom: 3.8rem;
+}
+.details-title {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+.details-title::after {
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background: var(--color-black);
+  content: " ";
+  bottom: 0;
+  left: 0;
+}
+.details-title > .logo {
+  margin-bottom: 1.6rem;
+}
+.details-title > .para {
+  max-width: 25ch;
+}
+
+/* our company footer */
+.ourcompany-footer {
+  position: relative;
+  top: 204.6rem !important;
+}
+.ourcompany-copyright {
+  position: relative;
+  top: 204.6rem;
+}
+
+/* News page Styling */
+.news_page {
+  padding-block: 4rem;
+}
+.news_page-img-box {
+  margin-bottom: 1.6rem;
+}
+.news_page-contents {
+  margin-bottom: 4rem;
+}
+.news_page-contents > h4 {
+  max-width: 22ch;
+}
+
 /* ................Mediia Queries.....................  */
 @media screen and (max-width: 768px) {
+  .hero {
+    height: 56vh;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem !important;
+    line-height: 5.4rem !important;
+  }
   .navbar-nav {
     align-items: flex-start;
     padding-block: 3rem;
@@ -653,16 +740,25 @@ body
   .carousel-indicators {
     bottom: 56rem !important;
   }
-  .carousel-inner {
-    height: auto;
-  }
-  /* hero content */
-  .hero-content {
-    top: 36rem;
-    left: 9rem;
-  }
   .about_us {
-    padding: 4rem 5rem;
+    padding: 2rem 5rem;
+  }
+  .benefits-div-1 {
+    padding: 0;
+  }
+  .project-card .col-4 {
+    width: 50%;
+  }
+  .project-card {
+    background: linear-gradient(180deg, #cce7ff 0%, rgba(204, 231, 255, 0) 30%);
+  }
+  body > main > section.project-card > div > div > div.row {
+    gap: 0;
+    justify-content: space-around;
+  }
+  body > main > section.project-card > div > div > div.row {
+    justify-content: inherit;
+    gap: 0;
   }
   .benefits {
     flex-direction: column;
@@ -679,15 +775,17 @@ body
   .card-title > h4 {
     max-width: 10ch;
   }
-  .card-link {
-    top: 26rem !important;
-  }
   .card-title > h4 {
     margin: auto;
     max-width: 21ch;
   }
   .bg-seperator {
-    top: 16.6rem;
+    top: 100.6rem;
+    height: 44rem;
+  }
+  .union-left,
+  .union-right {
+    top: -30rem;
   }
   .map .row {
     flex-direction: column;
@@ -703,53 +801,48 @@ body
   }
 
   /* ourCompany page  */
-
-  .about_work .card-1 {
-    max-width: 48rem;
-    left: 0;
+  .hero-box {
+    top: 30rem;
   }
-  .about_work .card-2 {
-    max-width: 30rem;
-    right: 0;
-    top: -28rem;
-  }
-  .about_work .col-3 {
+  .hero-box .col-4 {
     width: 50%;
   }
-  .about_work .row:nth-child(2) {
-    top: 26rem !important;
-    left: 0;
-    width: 100%;
+  .hero-box .col-3 {
+    width: 50%;
   }
-  .about_work-bg-seperator {
-    height: 43.2rem;
-    top: 35.2rem;
+  .our_history {
+    top: 70rem;
   }
-  .about_work .steps {
-    margin-bottom: 2rem;
+  .hero-box-bg-seperator {
+    top: 58.6rem;
+  }
+  .ourcompany-footer {
+    top: 332.6rem !important;
+  }
+  .ourcompany-copyright {
+    top: 332.6rem;
   }
 
   /* .our_history */
-  .our_history {
-    top: 90rem;
-  }
   .our_history .col {
     flex-direction: column-reverse;
     gap: 2rem;
     margin-bottom: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   body > main > section.our_history > div > div:nth-child(3) > div {
     flex-direction: column;
+  }
+  #our_history > div > div:nth-child(3) > div > div.our_history-contents {
+    padding-right: inherit !important;
   }
   .our_history .para {
     max-width: 63ch;
   }
   .our_history .col-4 {
     width: 50%;
-  }
-  .ourcompany-footer,
-  .ourcompany-copyright {
-    top: 344rem;
   }
   .project_page-cards .col-4 {
     width: 50%;
@@ -760,9 +853,30 @@ body
   .project_page-cards .card-link {
     top: 42.5rem !important;
   }
+
+  /* .our_services */
+  .our_services-div-second .col-3 {
+    width: 50%;
+  }
+
+  /* .news_page  */
+  .news_page .col-3 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .hero {
+    height: 35vh;
+  }
+  h1 {
+    font-size: 3.2rem !important;
+    line-height: 4.4rem !important;
+  }
   .navbar-nav {
     align-items: center;
     padding-block: 3rem;
@@ -781,15 +895,6 @@ body
   /* carousel */
   .carousel-indicators {
     bottom: 49rem !important;
-  }
-  h1 {
-    font-size: 2.8rem !important;
-    line-height: 3.4rem !important;
-  }
-  /* hero content */
-  .hero-content {
-    top: 19rem;
-    left: 3rem;
   }
   .about_us {
     padding: 4rem 1rem;
@@ -811,17 +916,40 @@ body
   .about-benefits {
     text-align: start !important;
   }
+  .project-card {
+    padding-block: 3rem;
+    background: linear-gradient(180deg, #cce7ff 0%, rgba(204, 231, 255, 0) 12%);
+  }
   .project-card > .container {
     padding: 0 2rem !important;
   }
   body > main > section.project-card > div.container > div > div.row > div {
     width: 100%;
   }
-  .card-link {
-    top: 44rem !important;
+  .benefits-para {
+    max-width: 25ch;
+  }
+  body
+    > main
+    > section.news_section.about_us
+    > div
+    > div:nth-child(2)
+    > div:nth-child(1)
+    > div
+    > div.about-benefits
+    > p {
+    max-width: inherit;
+  }
+  .union-left,
+  .union-right {
+    display: none;
   }
   .bg-seperator {
     height: 160rem !important;
+    top: 100.6rem;
+  }
+  .about_us-contents > .btn-container {
+    margin-bottom: 4.8rem;
   }
   .news_section .benefits {
     flex-direction: column;
@@ -857,35 +985,39 @@ body
   .footer .row:last-child {
     gap: 2rem;
   }
-  .about_work .card-1 {
-    top: -5rem;
+
+  /* Our Company  */
+  .hero-box {
+    top: 18rem;
   }
-  .about_work .card-2 {
-    top: 32rem;
-    left: 0;
+  .hero-box .col-4 {
+    width: 100%;
+  }
+  .hero-box .col-4 .our-mission {
     margin: auto;
-    max-width: 50rem;
   }
-  .about_work .row:nth-child(2) {
-    top: 72rem !important;
-    left: 0;
+  .hero-box .col-3 {
     width: 100%;
   }
-  .about_work .col-3 {
-    width: 100%;
+  .hero-box-bg-seperator {
+    top: 96.6rem;
+    height: 95rem !important;
   }
-  .about_work-bg-seperator {
-    height: 107.6rem;
-    top: 81.2rem;
+  body > section > div.hero-box > div.container > div:nth-child(2) {
+    padding-block: 2rem;
   }
-  .about_work .steps {
-    margin-bottom: 2rem;
+  .ourcompany-footer {
+    top: 560.6rem !important;
+  }
+  .ourcompany-copyright {
+    top: 560.6rem;
   }
   .our_history .col-4 {
     width: 100%;
   }
   .our_history {
-    top: 194rem;
+    top: 182rem;
+    padding-block: 4rem;
   }
   .our_history .col {
     gap: 2rem;
@@ -903,14 +1035,20 @@ body
   .our_history-contents {
     margin: 0 2.2rem;
   }
-  .ourcompany-footer,
-  .ourcompany-copyright {
-    top: 564rem;
-  }
   .scroll-container {
     right: 20rem;
   }
   .project_page-cards .card-link {
-    top: 43.9rem !important;
+    top: 42.4rem !important;
+  }
+
+  /* .our_services */
+  .our_services-div-second .col-3 {
+    width: 100%;
+  }
+
+  /* .news_page */
+  .news_page .col-3 {
+    width: 100%;
   }
 }

@@ -49,8 +49,21 @@
 html {
   font-size: 62.5%;
 }
+body {
+  height: 100vh;
+}
 a {
   text-decoration: none !important;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.container-fluid {
+  padding: 0 !important;
+}
+.col {
+  padding: 0;
 }
 
 /* ................TYPHOGRAPHY.................... */
@@ -110,6 +123,14 @@ h4 {
 }
 .nav-text {
   color: var(--text-black) !important;
+}
+.projects_details-card-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--color-grey-regular);
+  font-family: var(--font-Inter);
+  text-transform: uppercase;
 }
 
 /*....................default btns.......................... */
@@ -717,6 +738,143 @@ body
   max-width: 22ch;
 }
 
+/* .....................sign_work page..................  */
+.sign_work {
+  background: var(--color-white);
+  padding: 6rem 30rem;
+}
+.sign_work-form {
+  padding: 4.8rem 4.6rem;
+  box-shadow: 0 0 4rem rgba(1, 30, 88, 0.15);
+  background: var(--color-white);
+  border-radius: 0.4rem;
+}
+.input-type-text {
+  margin-bottom: 2.2rem;
+}
+.input-type-text,
+.input-type-email {
+  border: 0.1rem solid var(--color-grey-regular);
+  padding: 1rem 1.2rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.text,
+.email {
+  border: none;
+  outline: none;
+}
+.input-type-text,
+.input-type-email > i {
+  font-size: 2.4rem;
+}
+.message {
+  width: 100%;
+  outline: none;
+  padding: 1rem 2.8rem;
+  border: 0.1rem solid var(--color-grey-regular);
+  height: 14.8rem;
+}
+.sign_work-form .btn-container {
+  text-align: end;
+}
+
+/* .............project details page ..............*/
+
+.project_name {
+  margin-block: 2rem;
+}
+.project_name span {
+  color: var(--color-blue);
+}
+.project_name .para {
+  color: var(--color-grey-dark);
+}
+.projects_details {
+  position: relative;
+  left: 0;
+  bottom: 50rem;
+}
+.projects_details-title {
+  padding: 3.8rem 22rem 3.8rem 3.6rem;
+  background: var(--color-white);
+}
+.projects_details-title > h2 {
+  max-width: 33ch;
+}
+.projects_details-card {
+  padding: 4.4rem;
+  box-shadow: 0px 14px 24px rgba(1, 30, 88, 0.25);
+  max-width: 32rem;
+  background: var(--color-white);
+}
+.projects_details-card-icon {
+  margin-bottom: 2rem;
+}
+.projects_details-card-title {
+  margin-bottom: 0.2rem;
+}
+.projects_details-info {
+  margin-block: 4rem;
+}
+.projects_details-info > .para {
+  max-width: 47ch;
+}
+
+/* other_projects */
+.other_projects {
+  position: relative;
+  left: 0;
+  bottom: 42rem;
+}
+.other_projects-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.other_projects-img {
+  position: relative;
+}
+.other_projects-img-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding-block: 2.4rem;
+  text-align: center;
+}
+
+/* status */
+.status {
+  background: var(--color-dark-blue);
+  padding-block: 8rem;
+  position: relative;
+  left: 0;
+  bottom: 42rem;
+}
+.status-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.status-info {
+  text-align: center;
+}
+.status-info > h1 {
+  margin-bottom: 0.8rem;
+}
+.status-info > h4 {
+  color: var(--color-btn-hover-fadeWhite);
+}
+.projects_details-footer,
+.projects_details-copyright {
+  position: relative;
+  left: 0;
+  bottom: 42rem;
+}
+
 /* ................Mediia Queries.....................  */
 @media screen and (max-width: 768px) {
   .hero {
@@ -866,6 +1024,29 @@ body
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  /* .sign_work */
+  .sign_work-hero {
+    height: 50vh;
+  }
+  .sign_work {
+    padding: 0 !important;
+    margin-block: 6rem;
+  }
+
+  /* .projects_details */
+  .projects_details-title {
+    padding: 4rem;
+  }
+  .projects_details-card {
+    padding: 2rem;
+  }
+  body > main > section.status > div > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .status-info {
+    margin-bottom: 4rem;
   }
 }
 
@@ -1050,5 +1231,41 @@ body
   /* .news_page */
   .news_page .col-3 {
     width: 100%;
+  }
+
+  /* .sign_work */
+  .sign_work-form {
+    padding: 2rem;
+  }
+
+  /* .projects_details */
+  .projects_details {
+    bottom: 0;
+  }
+  .projects_details .col-8 {
+    width: 100%;
+  }
+  .projects_details .col-4 {
+    width: 100%;
+    justify-content: center !important;
+  }
+  .projects_details .col-6 {
+    margin-bottom: 0;
+  }
+  .projects_details-info {
+    margin-block: 2rem;
+  }
+  .projects_details-img-box {
+    display: flex;
+    justify-content: center;
+  }
+  .other_projects {
+    padding-top: 4rem;
+  }
+  .other_projects,
+  .status,
+  .projects_details-footer,
+  .projects_details-copyright {
+    bottom: 0;
   }
 }

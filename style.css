@@ -51,6 +51,7 @@ html {
 }
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none !important;
@@ -63,6 +64,9 @@ a {
   padding: 0 !important;
 }
 .col {
+  padding: 0;
+}
+.col-12 {
   padding: 0;
 }
 
@@ -875,6 +879,35 @@ body
   bottom: 42rem;
 }
 
+/* ...............news_article page styling................ */
+.news_article {
+  padding: 0 32rem 0 32rem;
+}
+.news_article-title {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+.news_article-img-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+body > header > main > section > div > div:nth-child(3) {
+  padding: 0 9rem 0 9rem;
+}
+.news_article-content-1-info {
+  margin-bottom: 2.4rem;
+}
+.news_article-content-2-img-box {
+  margin-bottom: 3.8rem;
+}
+.news_article-content-3-title {
+  margin-bottom: 1.6rem;
+}
+.news_article-content-3-info {
+  margin-bottom: 3.2rem;
+}
+
 /* ................Mediia Queries.....................  */
 @media screen and (max-width: 768px) {
   .hero {
@@ -894,6 +927,7 @@ body
   .navbar-collapse {
     padding-block: 6rem;
   }
+
   /* carousel */
   .carousel-indicators {
     bottom: 56rem !important;
@@ -1047,6 +1081,14 @@ body
   }
   .status-info {
     margin-bottom: 4rem;
+  }
+
+  /* .news_article */
+  .news_article {
+    padding: 0;
+  }
+  body > header > main > section > div > div:nth-child(3) {
+    padding: 0;
   }
 }
 
@@ -1267,5 +1309,23 @@ body
   .projects_details-footer,
   .projects_details-copyright {
     bottom: 0;
+  }
+
+  /* .news_article */
+  .news_article .col-4,
+  .news_article .col-8 {
+    width: 100%;
+    padding: 0;
+  }
+  body > header > main > section > div > div:nth-child(3) {
+    padding: 0 3rem;
+  }
+  .project_name .para {
+    padding: 0 3rem;
+    text-align: center;
+  }
+  .news_article-content-2-img-box {
+    display: flex;
+    justify-content: center;
   }
 }
